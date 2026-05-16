@@ -1,0 +1,11 @@
+DECLARE
+
+a int;
+
+BEGIN
+ 
+ a:=&a;
+ DBMS_OUTPUT.PUT_LINE('Cube '||a*a*a);
+
+END;
+/
