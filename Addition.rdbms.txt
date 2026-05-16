@@ -1,0 +1,14 @@
+DECLARE
+ 
+a int;
+b int;
+ans int;
+
+BEGIN
+ a:=&a;
+ b:=&b;
+ans:=a+b;
+DBMS_OUTPUT.PUT_LINE('Addition '||ans);
+
+END;
+/
