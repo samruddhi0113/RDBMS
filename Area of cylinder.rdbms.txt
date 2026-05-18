@@ -1,0 +1,19 @@
+DECLARE
+
+r float;
+h float;
+Area float;
+Cylinder float;
+
+BEGIN
+   
+   r:=&r;
+   h:=&h;
+   Area:=2*3.14*r*h+2*3.14*r*r;
+   Cylinder:=2*3.14*r;
+   
+   DBMS_OUTPUT.PUT_LINE('Area of Cylinder'||Area);
+   DBMS_OUTPUT.PUT_LINE('Circumfereance of Cylinder'||Cylinder);
+
+END;
+/
