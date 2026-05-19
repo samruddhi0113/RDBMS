@@ -1,0 +1,15 @@
+DECLARE
+
+  num  number;
+BEGIN
+
+   num:=&num;
+
+  if num > 0 then
+    DBMS_OUTPUT.PUT_LINE('Number is postive');
+  else
+     DBMS_OUTPUT.PUT_LINE('Number is negative');
+ end if;
+
+END;
+/
