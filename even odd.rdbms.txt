@@ -1,0 +1,15 @@
+DECLARE
+
+  a int;
+
+BEGIN
+
+  a:=&a;
+  if a mod 2=0 then
+    DBMS_OUTPUT.PUT_LINE('Number is Even');
+  else
+   DBMS_OUTPUT.PUT_LINE('Number is odd');
+  
+ end if;
+end;
+/
