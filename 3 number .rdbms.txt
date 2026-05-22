@@ -1,0 +1,27 @@
+DECLARE
+
+a int;
+b int;
+c int;
+
+BEGIN
+
+  a:=&a;
+  b:=&b;
+  c:=&c;
+
+ if a>b and a>c then
+    DBMS_OUTPUT.PUT_LINE('a is greater');
+ else if b>a and b>c then
+   DBMS_OUTPUT.PUT_LINE('b is greater');
+ else if c>a and c>b then
+   DBMS_OUTPUT.PUT_LINE('c is greater');
+ else
+  DBMS_OUTPUT.PUT_LINE('both are same');
+
+  end if;
+  end if;
+  end if;
+ END;
+ /
+  
