@@ -1,0 +1,19 @@
+DECLARE
+
+i int;
+n int;
+
+BEGIN
+
+ n:=&n;
+ i:=1;
+LOOP
+  if i mod 2 =0 then
+    DBMS_OUTPUT.PUT_LINE('Even ='||i);
+ end if;
+  i:=i+1;
+
+EXIT WHEN i>n;
+END LOOP;
+END;
+/
