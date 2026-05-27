@@ -1,0 +1,18 @@
+DECLARE
+
+i int;
+num int;
+fact int;
+
+BEGIN
+    
+    fact:=1;
+   num:=&num;
+
+ for i in 1..num
+ LOOP
+      fact:=fact*i;
+  END LOOP;
+  DBMS_OUTPUT.PUT_LINE('FACTORIAL '||fact);
+END;
+/
