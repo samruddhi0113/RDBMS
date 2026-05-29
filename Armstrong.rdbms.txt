@@ -1,0 +1,26 @@
+DECLARE
+
+num int;
+n int;
+d int;
+s int;
+ 
+BEGIN
+
+num:=&num;
+n:=num;
+s:=0;
+
+while num > 0
+LOOP
+   d:=num mod 10;
+   s:=s + (d*d*d);
+   num:=Floor(num/10);
+END LOOP;
+ if n=s THEN
+      DBMS_OUTPUT.PUT_LINE('Armstrong Number');
+ else
+     DBMS_OUTPUT.PUT_LINE(' not Armstrong Number');
+end if;
+END;
+/
