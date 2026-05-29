@@ -1,0 +1,17 @@
+DECLARE
+
+f float;
+c float;
+k float;
+
+BEGIN
+ 
+  f:=&f;
+ c:=0.5/9*(f-32);
+ k:=c+273.15;
+
+DBMS_OUTPUT.PUT_LINE('Celsius '||c);
+DBMS_OUTPUT.PUT_LINE('Kelvin  '||k);
+
+END;
+/
