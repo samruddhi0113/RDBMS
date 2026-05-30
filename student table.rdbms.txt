@@ -1,0 +1,50 @@
+create table student(rno int primary Key,
+                     sname char(10),
+                     per float,
+                     class varchar(5));
+
+insert into student values(1,'yor',49.54,11);
+insert into student values(2,'lee',62.99,12);
+insert into student values(3,'min',94.54,5);
+insert into student values(4,'yuri',84.64,6);
+insert into student values(5,'loid',74.32,7);
+insert into student values(6,'suk',62.58,8);
+insert into student values(7,'anya',71.55,9);
+insert into student values(8,'IU',89.54,3);
+insert into student values(9,'damin',89.54,10);
+insert into student values(10,'do',61.94,11);
+
+select * from student;
+
+DECLARE
+
+rno int;
+sname char(10);
+per float;
+class varchar(5);
+
+BEGIN
+
+rno:=&rno;
+sname:=&sname;
+per:=&per;
+class:=&class;
+
+if per>=40 and per<=50 Then
+             class:='pass';
+else if per>50 and per<=60 Then
+              class:='C';
+else if per>60 and per<=70 Then
+              class:='B';
+else if per>70 and per<=80 Then
+              class:='A';
+else if per>80 and per<=100 Then
+              class:='O';
+else
+        class:='Fail';
+END if; END if;END if; END if;END if;
+
+insert into student values(rno,sname,per,class);
+END;
+/
+
