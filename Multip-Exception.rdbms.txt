@@ -1,0 +1,23 @@
+DECLARE
+
+a int;
+b int;
+ans int;
+
+BEGIN
+
+  a:=&a;
+  b:=&b;
+ ans:=a*b;
+
+   DBMS_OUTPUT.PUT_LINE('Miltiplication '||ans);
+
+EXCEPTION
+
+  WHEN invalid_number or value_error THEN
+            DBMS_OUTPUT.PUT_LINE('invalid Arithmatic operation');
+
+   when others then
+             DBMS_OUTPUT.PUT_LINE('Something went wrong');
+END;
+/
