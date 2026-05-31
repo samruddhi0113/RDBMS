@@ -1,0 +1,26 @@
+Create table student(sno int primary key,
+                             sname varchar(10),
+                             per float);
+
+insert into student values(101,'loid',92.09);
+insert into student values(102,'yuri',94.30);
+insert into student values(103,'yor',82.69);
+insert into student values(104,'anaya',52.99);
+insert into student values(105,'bond',82.35);
+
+DECLARE
+
+u_sname char(10);
+
+BEGIN
+
+   select sname into u_sname from student where sno=101;
+
+   DBMS_OUTPUT.PUT_LINE('student name '||u_sname);
+
+EXCEPTION
+             When TOO_MANY_ROWS Then
+                     DBMS_OUTPUT.PUT_LINE('too many rows');
+END;
+/
+           
