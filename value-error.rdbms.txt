@@ -1,0 +1,18 @@
+DECLARE
+
+a number;
+b number;
+ans number;
+
+BEGIN
+       a:=&a;
+       b:=&b;
+      ans:=a+b;
+                   
+     DBMS_OUTPUT.PUT_LINE('Addition='||ans);
+
+Exception
+    When Value_Error Then
+           DBMS_OUTPUT.PUT_LINE('VALUE ERROR');
+END;
+/
