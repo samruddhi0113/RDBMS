@@ -1,0 +1,20 @@
+DECLARE
+
+a float;
+b float;
+ans float;
+
+BEGIN
+
+   a:=&a;
+   b:=&b;
+
+   ans:=a/b;
+    DBMS_OUTPUT.PUT_LINE('Divide='||ans);
+
+Exception
+           When Zero_Divide Then
+                  DBMS_OUTPUT.PUT_LINE('do not divide by zero');
+END;
+/
+
