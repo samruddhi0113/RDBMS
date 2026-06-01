@@ -1,0 +1,16 @@
+DECLARE
+
+EMP_NAME varchar(10);
+EMP_eno int;
+
+BEGIN
+
+      EMP_eno:=&EMP_eno;
+      Select ENAME into EMP_NAME from emp where ENO=EMP_eno;
+
+Exception
+
+         When NO_DATA_FOUND Then
+                  DBMS_OUTPUT.PUT_LINE('Employee not found');
+END;
+/
