@@ -1,0 +1,22 @@
+DECLARE
+
+age int;
+invalid_age Exception;
+
+BEGIN
+   
+    age:=&age;
+
+   if age<18 Then
+         Raise invalid_age;
+   else
+       DBMS_OUTPUT.PUT_LINE('Voter is eligal for voting');
+  end if;
+
+EXCEPTION
+          When invalid_age Then
+               DBMS_OUTPUT.PUT_LINE('Voter is too small for voting');
+          When Others Then
+               DBMS_OUTPUT.PUT_LINE('Something went wrong');
+END;
+/
