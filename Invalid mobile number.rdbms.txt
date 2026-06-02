@@ -1,0 +1,20 @@
+DECLARE
+
+mobile_no int;
+invalid_number Exception;
+
+BEGIN
+   
+    mobile_no:=&mobile_no;
+
+   if mobile_no<10 and mobile_no>10 Then
+         Raise invalid_number;
+   else
+       DBMS_OUTPUT.PUT_LINE('correct input');
+  end if;
+
+EXCEPTION
+          When invalid_number Then
+               DBMS_OUTPUT.PUT_LINE('invalid mobile number');
+END;
+/
