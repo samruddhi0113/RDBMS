@@ -1,0 +1,21 @@
+Create or replace function minimum return float
+is
+
+ans float;
+BEGIN
+
+          select min(SAL) into ans from EMP;
+             return ans;
+END;
+/
+
+DECLARE
+ans float;
+
+BEGIN
+
+     ans:=minimum;
+                 DBMS_OUTPUT.PUT_LINE('Minimum='||ans);
+END;
+/
+
