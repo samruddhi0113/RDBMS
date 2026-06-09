@@ -1,0 +1,19 @@
+Create or replace function minimum
+return float
+is
+ans float;
+
+BEGIN
+     select min(mamt) into ans from policy; 
+                             return ans;
+end;
+/
+
+DECLARE
+
+ans float;
+BEGIN
+             ans:=minimum;
+        DBMS_OUTPUT.PUT_LINE('Minimum ='||ans);
+END;
+/
